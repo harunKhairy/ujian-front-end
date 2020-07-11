@@ -7,267 +7,46 @@
       "role": "admin"
     },
     {
-      "password": "berhasil",
+      "id": 1,
       "username": "user",
-      "role": "user",
-      "id": 2
-    },
-    {
-      "username": "alo",
-      "password": "alo",
-      "id": 3
-    },
-    {
-      "username": "magnum",
-      "password": "magnum",
-      "role": "user",
-      "id": 4
-    },
-    {
-      "username": "lagi",
-      "password": "lagi",
-      "role": "user",
-      "id": 5
-    },
-    {
-      "username": "test123",
-      "password": "test123",
-      "role": "user",
-      "id": 6
-    },
-    {
-      "role": "user",
-      "id": 7
-    },
-    {
-      "role": "user",
-      "id": 8
-    },
-    {
-      "role": "user",
-      "id": 9
-    },
-    {
-      "username": "kiki",
-      "password": "kiki",
-      "role": "user",
-      "id": 10
-    },
-    {
-      "role": "user",
-      "id": 11
-    },
-    {
-      "role": "user",
-      "id": 12
-    },
-    {
-      "role": "user",
-      "id": 13
-    },
-    {
-      "role": "user",
-      "id": 14
-    },
-    {
-      "role": "user",
-      "id": 15
-    },
-    {
-      "role": "user",
-      "id": 16
-    },
-    {
-      "role": "user",
-      "id": 17
-    },
-    {
-      "role": "user",
-      "id": 18
-    },
-    {
-      "username": "ukiki",
-      "password": "kiki",
-      "role": "user",
-      "id": 19
-    },
-    {
-      "username": "123",
-      "password": "123",
-      "role": "user",
-      "id": 20
-    },
-    {
-      "username": "test",
-      "password": "12345",
-      "role": "user",
-      "id": 21
-    },
-    {
-      "role": "user",
-      "id": 22
-    },
-    {
-      "role": "user",
-      "id": 23
-    },
-    {
-      "role": "user",
-      "id": 24
-    },
-    {
-      "username": "12345",
-      "password": "12345",
-      "role": "user",
-      "id": 25
+      "password": "user",
+      "role": "user"
     }
   ],
   "products": [
     {
       "name": "tamiya",
       "image": "https://static.bmdstatic.com/pk/product/medium/5d5bad2b32af2.jpg",
-      "stok": 10,
-      "kategoriId": 3,
-      "harga": 100000,
-      "deskripsi": "barang bekas saya",
+      "stock": 10,
+      "categoryId": 3,
+      "price": 100000,
+      "deskription": "barang bekas saya",
       "id": 2
-    },
-    {
-      "name": "baju hawai",
-      "image": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/12/13/36425091/36425091_7edcb8f5-da4b-4c8e-854f-df795499962c_1200_1200.jpg",
-      "stok": 100,
-      "kategoriId": 1,
-      "harga": 150000,
-      "deskripsi": "baju hawai serasa di hawai tinggal di pantai",
-      "id": 3
-    },
-    {
-      "name": "celana hawai",
-      "image": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/10/13/4934396/4934396_808858dc-1b46-4a69-856c-3979d39d30eb_1181_1387.jpg",
-      "stok": 100,
-      "kategoriId": 1,
-      "harga": 100000,
-      "deskripsi": "celana kece ",
-      "id": 4
-    },
-    {
-      "name": "baju jalan",
-      "image": "https://s1.bukalapak.com/img/6767521313/w-1000/PAKAIAN_BAJU_JALAN_SANTAI_EANITA_MODIS___FASHION_WANITA_CANT.jpg",
-      "stok": 100,
-      "kategoriId": 1,
-      "harga": 100000,
-      "deskripsi": "baju kece",
-      "id": 5
-    },
-    {
-      "name": "handphone realmy",
-      "image": "https://ecs7.tokopedia.net/img/cache/700/product-1/2018/1/25/0/0_f817e3cd-4d6d-40dd-9d3b-ef2ba17ef145_700_700.jpg",
-      "stok": 100,
-      "kategoriId": 2,
-      "harga": 400000,
-      "deskripsi": "handphone kece",
-      "id": 6
-    },
-    {
-      "name": "sapu lidi",
-      "image": "https://s3.bukalapak.com/img/8184534924/w-1000/sapu_lidi_gagang_kayu_cap_MACAN.jpg",
-      "stok": 120,
-      "kategoriId": 2,
-      "harga": 10000,
-      "deskripsi": "sapu harry potter",
-      "id": 7
-    },
-    {
-      "name": "mobil kuning",
-      "image": "https://www.pexels.com/photo/automobile-automotive-blurred-background-car-385997",
-      "stok": 30,
-      "kategoriId": 3,
-      "harga": 11000,
-      "deskripsi": "mainan mobil anak",
-      "id": 8
-    },
-    {
-      "name": "spinner",
-      "image": "https://images.pexels.com/photos/1330638/pexels-photo-1330638.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "stok": 35,
-      "kategoriId": 3,
-      "harga": 11000,
-      "deskripsi": "spinner keren",
-      "id": 9
-    },
-    {
-      "name": "HandPhone Asus",
-      "image": "https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "stok": 15,
-      "kategoriId": 2,
-      "harga": 11000,
-      "deskripsi": "Hasil Foto memuaskan",
-      "id": 10
-    },
-    {
-      "name": "Sari Roti",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTuuqmqVxNY3A0MAiTCzfsDkeKXWcLBzCyKFL75-lzTA2RknPpS",
-      "stok": 15,
-      "kategoriId": 4,
-      "harga": 11000,
-      "deskripsi": "enak mengenyangkan",
-      "id": 11
     }
+    
   ],
-  "kategoris": [
+  "category": [
     {
       "id": 1,
-      "nama": "pakaian"
+      "nama": "shirt"
     },
     {
       "id": 2,
-      "nama": "elektronik"
+      "nama": "pants"
     },
     {
       "id": 3,
-      "nama": "mainan"
+      "nama": "bag"
     },
     {
       "id": 4,
-      "nama": "makanan"
+      "nama": "shoes"
     }
   ],
   "transactions": [
-    {
-      "status": "oncart",
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "status": "oncart",
-      "userId": 25,
-      "id": 2
-    }
+
   ],
   "transactiondetails": [
-    {
-      "transactionId": 1,
-      "productId": 4,
-      "qty": 1,
-      "id": 2
-    },
-    {
-      "transactionId": 1,
-      "productId": 3,
-      "qty": 2,
-      "id": 3
-    },
-    {
-      "transactionId": 2,
-      "productId": 4,
-      "qty": 1,
-      "id": 4
-    },
-    {
-      "transactionId": 1,
-      "productId": 11,
-      "qty": 4,
-      "id": 5
-    }
+    
   ]
 }

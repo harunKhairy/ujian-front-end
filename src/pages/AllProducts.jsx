@@ -10,13 +10,15 @@ import {FaCartPlus} from 'react-icons/fa'
 
 class AllProducts extends Component {
     state = {
-        dataproducts: []
+        products: [],
+        category: "",
+        searchProduct: [],
     }
 
     componentDidMount() {
         Axios.get( `${API_URL}/products?_expand=kategori`)
-        .then(res => {
-            this.setState ({dataproducts: res.data})
+        .then(response => {
+            this.setState ({products: response.data})
         })
         .catch ( err => {
             console.log(err)

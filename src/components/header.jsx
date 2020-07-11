@@ -3,28 +3,25 @@ import {
 MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,
 MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import {connect} from 'react-redux'
-import {FaUserCircle} from 'react-icons/fa'
-import {FiShoppingCart} from 'react-icons/fi'
-import {BukanHome,IniHome} from './../redux/actions'
+import {connect} from 'react-redux';
+import {FaUserCircle} from 'react-icons/fa';
+import {FiShoppingCart} from 'react-icons/fi';
+import {BukanHome,IniHome} from './../redux/actions';
 
 class NavbarPage extends Component {
-    state = {
-        isOpen: false
-    };
+
+    state = { isOpen: false };
 
     toggleCollapse = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
 
- 
-
     render() {
-        console.log(this.props.Header)
         return (
-            <MDBNavbar color="black" transparent={this.props.Header} scrolling className='bordernav' dark fixed='top' expand="md">
+            <MDBNavbar color="black" dark sticky="top" expand="md">
+
                 <MDBNavbarBrand href='/'>
-                    <strong className={'white-text'}>MiniMales</strong>
+                    <strong className={'white-text'}>Logo</strong>
                 </MDBNavbarBrand>
 
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -33,93 +30,81 @@ class NavbarPage extends Component {
 
                 <MDBNavbarNav tag='div' right className='mr-5' >
                     <MDBNavItem >
+
+                        {/* USER LOGIN ADMIN */}
                         {
-                            this.props.User.role==='admin'
-                            ?
+                            this.props.User.role === 'admin' ?
                             <div style={{display: "flex"}}>
-                            <MDBNavLink to='/manageadmin'>Manage Admin</MDBNavLink>
-                            <MDBNavLink to='/manage-transaksi'>Manage Transaksi</MDBNavLink>
-                                {/* <MDBNavItem>
-                                    <MDBNavLink to='/cart'>
-                                        <FiShoppingCart style={{fontSize:20}}/> Cart 
-                                    </MDBNavLink>
-                                </MDBNavItem> */}
+                                <MDBNavLink to='/manageadmin'>Manage Admin</MDBNavLink>
+                                <MDBNavLink to='/manage-transaksi'>Manage Transaksi</MDBNavLink>
+                                
                                 <MDBDropdown >
                                     <MDBDropdownToggle nav className='warnanav' >
                                         <FaUserCircle/> hallo, {this.props.User.username}
                                     </MDBDropdownToggle>
+
                                     <MDBDropdownMenu className='dropdown1' >
-                                        {/* <MDBDropdownItem href="#!">Action</MDBDropdownItem> */}
                                         <MDBDropdownItem href="/change_password">Ubah Password</MDBDropdownItem>
                                         <MDBDropdownItem href="/" onClick={() => btnSignOut()} >Logout</MDBDropdownItem>
                                     </MDBDropdownMenu>
                                 </MDBDropdown>
-                            </div>
-                            :
+                            </div> :
                             null
                         }
                             
                     </MDBNavItem>
-                    {/* <MDBNavItem>
-                        <MDBNavLink to='/cart'>
-                            <FiShoppingCart style={{fontSize:20}}/> Cart 
-                        </MDBNavLink>
-                    </MDBNavItem> */}
+
+
+                        {/* Jika tidak Login */}
                     <MDBNavItem>
                         {
-                            this.props.User.islogin
-                            ?
-                            null
-                            :
+                            this.props.User.islogin ?
+                            null :
                             <div style={{display: "flex"}}>
                                 <MDBNavItem><MDBNavLink to='/login'>Login</MDBNavLink></MDBNavItem>
                                 <MDBNavItem><MDBNavLink to='/register'>Daftar</MDBNavLink></MDBNavItem>
                             </div>
-                            
-
                         }
                     </MDBNavItem>
-            
+                        
+
+                        {/* JIKA USER LOGIN */}
                     <MDBNavItem>
                         {
-                            // this.props.User.username
-                            this.props.User.role==='user'
-                            ?
+                            this.props.User.role === 'user' ?
                             <div style={{display: "flex"}}>
                                 <MDBNavItem>
                                     <MDBNavLink to='/cart'>
                                         <FiShoppingCart style={{fontSize:20}}/> Cart 
                                     </MDBNavLink>
                                 </MDBNavItem>
+
                                 <MDBDropdown >
                                     <MDBDropdownToggle nav className='warnanav' >
                                         <FaUserCircle/> hallo, {this.props.User.username}
                                     </MDBDropdownToggle>
                                     <MDBDropdownMenu className='dropdown1' >
-                                        {/* <MDBDropdownItem href="#!">Action</MDBDropdownItem> */}
-                                        <MDBDropdownItem href="/change_password">Ubah Password</MDBDropdownItem>
+                                        <MDBDropdownItem href="#">Profile</MDBDropdownItem>
+                                        <MDBDropdownItem href="/change_password">Change Password</MDBDropdownItem>
                                         <MDBDropdownItem href="/" onClick={() => btnSignOut()} >Logout</MDBDropdownItem>
                                     </MDBDropdownMenu>
                                 </MDBDropdown>
-                            </div>
-                            :
+                            </div> :
                             null
                         }
                     </MDBNavItem>
                     
-                    <MDBNavItem>
-                    
-                    </MDBNavItem>
+
                 </MDBNavbarNav>
                 </MDBCollapse>
             </MDBNavbar>
             );
-    }
-}
+    };
+};
 
 const btnSignOut = () => {
     localStorage.clear()
-    // window.location.reload()
+    
 }
 
 const MapstatetoProps=(state)=>{
